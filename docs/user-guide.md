@@ -302,6 +302,19 @@ Archive a project or task when you no longer use it. Archived items stay on old 
 To archive a project in one click, select the archive icon next to the pencil on its row. The toast
 that follows has an **Undo** button. On an archived row, the same icon unarchives the project.
 
+To delete a project, select the trash icon on its row. You can delete a project only when it has
+no entries. Its planner items stay, without the project, and its routing rules go. The toast that
+follows has an **Undo** button.
+
+A project with entries can't be deleted, so its trash icon is dimmed. Select it to see why, then
+merge or archive the project instead.
+
+To merge two projects, select the merge icon on the row of the project that you want to remove.
+Pick the project to merge into. The dialog shows how many entries move. HourLog moves the entries,
+planner items, routing rules, and tasks, then deletes the first project. A task with the same name
+in both projects becomes one task. You can't merge a project with entries on booked days. Unlock
+those weeks on the **Timesheet** page first. The toast that follows has an **Undo** button.
+
 ### Tags
 
 The **Tags** page manages labels such as `billable`, `meeting`, or `overtime`. Archived tags stay

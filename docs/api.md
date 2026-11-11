@@ -92,6 +92,8 @@ whole change.
 | POST | `/projects` | `{ name, clientId?, color?, customFields?, hourlyRate? }` |
 | PUT | `/projects/{id}` | The POST body plus `archived`. A missing `hourlyRate` removes the project rate |
 | PUT | `/projects/{id}/archived` | `{ archived }`. Changes only the archived flag and skips the custom field checks |
+| DELETE | `/projects/{id}` | Deletes a project with no entries. Returns `{ changeBatchId, entries }`. A project with entries gives 400 |
+| POST | `/projects/{id}/merge` | `{ targetId }`. Moves the entries, planner items, rules, and tasks to the target, then deletes the project. Returns `{ changeBatchId, entries }`. Entries on booked days give 400 |
 | POST | `/projects/{id}/tasks` | `{ name, customFields? }` |
 | PUT | `/tasks/{id}` | `{ name, archived, customFields? }` |
 | GET | `/clients` | |
