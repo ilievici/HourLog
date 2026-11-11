@@ -101,6 +101,12 @@ next day.
 
 On the **Planner** page, `N` and `/` focus the quick-add field.
 
+### Go back to the top
+
+On a long page, such as **Settings**, **Projects**, or **Timesheet**, a button with an up arrow appears in the
+bottom-left corner after you scroll down. Click it, or press `Enter` when it has focus, to go back to the top.
+Focus then moves to the page tab, so you can go on with the keyboard.
+
 ### When your PC sleeps
 
 If your PC sleeps while a timer runs, HourLog asks what to do with that time when you come back:
