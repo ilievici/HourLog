@@ -299,6 +299,9 @@ back to the client rate. See [See what your time earns](#see-what-your-time-earn
 Archive a project or task when you no longer use it. Archived items stay on old entries. Turn on
 **Show archived** to see them.
 
+To archive a project in one click, select the archive icon next to the pencil on its row. The toast
+that follows has an **Undo** button. On an archived row, the same icon unarchives the project.
+
 ### Tags
 
 The **Tags** page manages labels such as `billable`, `meeting`, or `overtime`. Archived tags stay

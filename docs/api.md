@@ -91,6 +91,7 @@ whole change.
 | GET | `/projects?includeArchived` | |
 | POST | `/projects` | `{ name, clientId?, color?, customFields?, hourlyRate? }` |
 | PUT | `/projects/{id}` | The POST body plus `archived`. A missing `hourlyRate` removes the project rate |
+| PUT | `/projects/{id}/archived` | `{ archived }`. Changes only the archived flag and skips the custom field checks |
 | POST | `/projects/{id}/tasks` | `{ name, customFields? }` |
 | PUT | `/tasks/{id}` | `{ name, archived, customFields? }` |
 | GET | `/clients` | |
