@@ -200,6 +200,9 @@ To import meetings from Outlook, save your calendar as an `.ics` file. In Outloo
 The **Tracker** page shows **Today's plan** when the planner is on. To turn the planner off, go to
 **Settings > Modules**. Turning it off hides the page and keeps its data.
 
+To hide the items of **Today's plan**, click its title or the arrow next to it. The summary and
+**Open planner** stay visible. HourLog remembers your choice in this browser.
+
 ## Analyze your time
 
 The **Analytics** page shows where your hours went for any period, from this week to the last 12
