@@ -334,6 +334,9 @@ looking at.
 
 - **Appearance**: the theme, UI size, and accent color. Your browser stores this choice. The
   palette button in the header changes it too.
+- **Language**: English or Romanian. **System** follows the language of your browser and of
+  Windows. The choice applies to the app, error messages, reminders, the PDF and Excel reports,
+  and the widget. CSV and JSON exports keep English column names, so other tools can read them.
 - **Tracking**: the first day of the week, the time and duration formats, rounding when you stop a
   timer, daily and weekly targets, and whether every entry needs a project or a description.
 - **Working hours and reminders**: your working days and hours, and these reminders:
@@ -366,6 +369,7 @@ directly, so it works with the browser closed.
 - Press `Ctrl+Alt+H` to turn click-through on or off. With click-through on, your clicks reach the
   window below the widget. Opening the widget from the Start menu also turns click-through off.
 - The widget follows the Windows light or dark app theme.
+- The widget uses the language from **Settings**. It switches within a minute of a change.
 
 The **Start** button starts a timer with no description. Add the details in the main app.
 

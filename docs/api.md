@@ -108,6 +108,10 @@ endpoints, the `tagIds` fields, and the exports still work, and stored tags stay
 `moneyInExports` in `SettingsDto` is `false` by default. It lets the `summary-csv` and `xlsx` report
 exports carry rates and earnings when `hourlyRatesEnabled` is on too. The full export ignores it.
 
+`language` in `SettingsDto` is `system`, `en`, or `ro`. It sets the language of error messages
+(`title`, `detail`, and the field errors), reminders, and the PDF and Excel reports. `system` follows
+the Windows display language. CSV and JSON exports stay English.
+
 ### Hourly rates
 
 A client has an optional `hourlyRate` and a `currency`. A project has an optional `hourlyRate` that
