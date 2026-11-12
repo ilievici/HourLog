@@ -90,6 +90,11 @@ next day.
 - Click a description, project, time, or date to change it in place.
 - Open the **More actions** menu on an entry to round it up, split it, duplicate it, edit its
   custom fields, or delete it.
+- Right-click the project of an entry, or press Shift+F10 on it, for two more options:
+  - **Go to project** opens the project's edit dialog on the Projects page.
+  - **Copy** puts one value of the entry on the clipboard: the project, the duration, or a custom
+    field like a booking code. **All fields** copies every value, one per line.
+  The **More actions** menu has the same two options.
 - Select several entries with their checkboxes to change or delete them together.
 - Each change shows a toast with **Undo**. Undo reverts the whole change, including bulk edits and
   imports.
