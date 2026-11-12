@@ -240,8 +240,12 @@ yourself. Your choice shows as **(set by you)** and counts in the chart.
 **Rewrite** improves the writing, fixes the grammar, or translates the note to English. Use it
 when a note mixes Romanian and English and you want it in one language.
 
-1. Turn the writing assistant on in **Settings > Writing assistant**. Pick **Claude** and paste
-   your Anthropic API key, or pick **Ollama** for a model that runs on your PC.
+1. Pick the assistant in **Settings > Writing assistant**:
+   - **Claude Code** uses the Claude Code program on your PC, signed in with your Claude account.
+     No API key. HourLog finds the program by itself. It is the default when Claude Code is
+     installed.
+   - **Claude** uses your own Anthropic API key.
+   - **Ollama** uses a model that runs on your PC.
 2. Optional: select the part of the note to rewrite. Without a selection, the whole note is
    rewritten.
 3. Click **Rewrite** and pick **Improve writing**, **Fix grammar**, or **Translate to English**.
@@ -250,9 +254,12 @@ when a note mixes Romanian and English and you want it in one language.
 5. Click **Replace**. Your note changes only now, and **Undo** brings the old text back. Click
    **Save** to keep it.
 
-Shift + right-click opens the browser menu with its spelling suggestions. The assistant is off by
-default. With Claude, only the text you send to rewrite leaves your PC. HourLog saves the API key
-encrypted and leaves it out of the full export. **Analyze** always works offline.
+Shift + right-click opens the browser menu with its spelling suggestions. With Claude Code or
+Claude, only the text you rewrite or analyze leaves your PC. HourLog saves the API key encrypted
+and leaves it out of the full export.
+
+**Analyze** also uses the assistant you picked. When the assistant is off, Analyze uses the offline
+word lists. The chart and the table always use the offline analysis.
 
 **Mood over time** shows one bar per note for the period you pick: up for positive, down for
 negative. Above the chart you see the average mood, the days per mood, and the done and not done

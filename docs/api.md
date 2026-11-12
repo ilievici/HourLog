@@ -307,7 +307,11 @@ better word lists update old notes too. The journal API stays on when you turn t
 | PUT | `/assistant` | `{ provider, claudeModel, apiKey, ollamaUrl, ollamaModel }`. A null `apiKey` keeps the saved key, `""` removes it | The settings |
 | POST | `/assistant/rewrite` | `{ mode, text }` | `{ text, provider, model }`. Saves nothing |
 
-`provider` is `Off`, `Claude`, or `Ollama`. `mode` is `Improve`, `Grammar`, or `Translate`. A
+`provider` is `Off`, `ClaudeCode`, `Claude`, or `Ollama`. `ClaudeCode` runs the `claude` program
+from `claudeCodePath`, or the one HourLog finds when the path is empty (`claudeCodeFound`), with no
+tools and no saved session. Until a provider is saved, it is `ClaudeCode` when the program is found
+and `Off` when not. `POST /journal/analyze` uses the same provider and adds `by`, the model that
+answered. With the assistant off, `by` is null and the offline word lists answer. `mode` is `Improve`, `Grammar`, or `Translate`. A
 rewrite with the assistant off returns `400`. A rewrite the model can't answer, for example with a
 wrong key or a stopped Ollama, returns `502` with a message that says what to do. The API key is
 encrypted with ASP.NET Data Protection and is not in the full export.
