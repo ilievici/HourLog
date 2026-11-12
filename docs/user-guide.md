@@ -305,6 +305,13 @@ bill the client by the hour. A project can have its own **Hourly rate** in the p
 replaces the client rate for that project and uses the currency of the client. Clear the field to go
 back to the client rate. See [See what your time earns](#see-what-your-time-earns).
 
+Some time isn't part of your working hours, such as on-call standby. To keep it out of the daily
+and weekly targets, turn on **Don't count toward the daily and weekly targets** in the project
+dialog. The project then shows an **Outside targets** badge. Its time doesn't fill the progress
+bars in the header and the tray, and it doesn't count for the end-of-day reminder. It still counts
+everywhere else: on the **Tracker**, **Timesheet**, and **Analytics** pages and in every export,
+including the booking CSV.
+
 Archive a project or task when you no longer use it. Archived items stay on old entries. Turn on
 **Show archived** to see them.
 

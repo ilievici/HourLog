@@ -89,7 +89,7 @@ whole change.
 | Method | Path | Body |
 | --- | --- | --- |
 | GET | `/projects?includeArchived` | |
-| POST | `/projects` | `{ name, clientId?, color?, customFields?, hourlyRate? }` |
+| POST | `/projects` | `{ name, clientId?, color?, customFields?, hourlyRate?, excludedFromTargets? }`. With `excludedFromTargets` on, the time of the project doesn't count in `/progress` |
 | PUT | `/projects/{id}` | The POST body plus `archived`. A missing `hourlyRate` removes the project rate |
 | PUT | `/projects/{id}/archived` | `{ archived }`. Changes only the archived flag and skips the custom field checks |
 | DELETE | `/projects/{id}` | Deletes a project with no entries. Returns `{ changeBatchId, entries }`. A project with entries gives 400 |
@@ -288,7 +288,7 @@ The planner API stays on when you turn the planner off in **Settings**.
 | Method | Path | Returns |
 | --- | --- | --- |
 | GET | `/system` | Version, commit, runtime, operating system, Windows service flag, start time, and time zone |
-| GET | `/progress` | Tracked seconds today and this week, the targets, and whether a timer runs |
+| GET | `/progress` | Tracked seconds today and this week, the targets, and whether a timer runs. Projects with `excludedFromTargets` don't count, and a timer on one gives `isRunning: false` |
 | GET | `/backups` | Database path and size, backup folder, retention, last and next backup, and the backups |
 | POST | `/backups` | `201` with the new backup file |
 | GET | `/backups/{name}` | The backup file. Only names like `hourlog-20261106-093000.db` are served |
