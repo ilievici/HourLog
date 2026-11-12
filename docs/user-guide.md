@@ -219,7 +219,8 @@ The **Journal** page holds one note per day about how the day went.
 1. Type a few lines in **Today's note**. To write about another day, pick it in the date box.
 2. Optional: under **Mood**, pick **Positive**, **Neutral**, or **Negative**. **Auto** lets the
    analysis decide.
-3. Click **Save**, or press **Ctrl+Enter**. Saving again on the same day updates the same note.
+3. Click **Save**, or press **Ctrl+Enter**. The note then shows as saved, with the time. Click
+   **Edit** to change it. Saving again on the same day updates the same note.
 
 Click **Analyze** to see how the day went:
 
@@ -232,6 +233,25 @@ Lines that start with `[x]` or `✓` count as done. Lines that start with `[ ]` 
 done. The analysis reads English and Romanian, with or without diacritics. It runs on your PC and
 sends nothing to the internet. It uses word lists, so it can be wrong. When it is, pick the mood
 yourself. Your choice shows as **(set by you)** and counts in the chart.
+
+### Rewrite a note
+
+**Rewrite** improves the writing, fixes the grammar, or translates the note to English. Use it
+when a note mixes Romanian and English and you want it in one language.
+
+1. Turn the writing assistant on in **Settings > Writing assistant**. Pick **Claude** and paste
+   your Anthropic API key, or pick **Ollama** for a model that runs on your PC.
+2. Optional: select the part of the note to rewrite. Without a selection, the whole note is
+   rewritten.
+3. Click **Rewrite** and pick **Improve writing**, **Fix grammar**, or **Translate to English**.
+   You can also right-click in the text box.
+4. Check the suggestion next to your text. You can edit it.
+5. Click **Replace**. Your note changes only now, and **Undo** brings the old text back. Click
+   **Save** to keep it.
+
+Shift + right-click opens the browser menu with its spelling suggestions. The assistant is off by
+default. With Claude, only the text you send to rewrite leaves your PC. HourLog saves the API key
+encrypted and leaves it out of the full export. **Analyze** always works offline.
 
 **Mood over time** shows one bar per note for the period you pick: up for positive, down for
 negative. Above the chart you see the average mood, the days per mood, and the done and not done

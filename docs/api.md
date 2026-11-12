@@ -299,6 +299,19 @@ The planner API stays on when you turn the planner off in **Settings**.
 `mood` is `Positive`, `Neutral`, or `Negative`. The analysis runs offline and is never stored, so
 better word lists update old notes too. The journal API stays on when you turn the module off.
 
+## Writing assistant
+
+| Method | Path | Body | Returns |
+| --- | --- | --- | --- |
+| GET | `/assistant` | | `{ provider, claudeModel, hasApiKey, ollamaUrl, ollamaModel }`. The key never comes back |
+| PUT | `/assistant` | `{ provider, claudeModel, apiKey, ollamaUrl, ollamaModel }`. A null `apiKey` keeps the saved key, `""` removes it | The settings |
+| POST | `/assistant/rewrite` | `{ mode, text }` | `{ text, provider, model }`. Saves nothing |
+
+`provider` is `Off`, `Claude`, or `Ollama`. `mode` is `Improve`, `Grammar`, or `Translate`. A
+rewrite with the assistant off returns `400`. A rewrite the model can't answer, for example with a
+wrong key or a stopped Ollama, returns `502` with a message that says what to do. The API key is
+encrypted with ASP.NET Data Protection and is not in the full export.
+
 ## System, progress, backups, and full export
 
 | Method | Path | Returns |
