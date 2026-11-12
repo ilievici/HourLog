@@ -70,13 +70,17 @@ You can undo the change from the message that appears.
 To stop the timer, press `S` or click **Stop**. If you turned on rounding, a dialog shows the
 rounded time first. Nothing changes until you confirm.
 
+HourLog tracks hours and minutes, not seconds. The timer starts at the current minute and stops at
+the current minute, so a timer that you stop within the same minute adds no entry.
+
 To restart earlier work, click **Continue** on its entry. A new timer starts with the same
 description, project, task, and tags.
 
 ### Add time by hand
 
 Press `M` or click the mode switch to add an entry with a start and an end time. Durations accept
-`1.5`, `1,5`, `1:30`, `90m`, `1h30`, and `1h 30m`. A bare number means hours.
+`1.5`, `1,5`, `1:30`, `90m`, `1h30`, and `1h 30m`. A bare number means hours. HourLog rounds a
+duration to the nearest minute.
 
 An entry can end after midnight. HourLog shows a marker on the end time when an entry ends on the
 next day.
@@ -229,7 +233,7 @@ The **Overview** shows the following:
 
 Turn on rounding to round each date, project, and task, and to see the difference against the
 exact time. Rounding uses the step that you set in **Settings > Booking**. HourLog stores exact
-times to the second.
+times to the minute.
 
 ### See what your time earns
 

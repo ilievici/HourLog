@@ -13,7 +13,9 @@ own scripts all use it. This page lists every endpoint.
 - Bodies and responses are JSON in camelCase. Enums are strings, for example `"Add"`.
 - Times are ISO 8601 with an offset, for example `2026-11-06T09:30:00+02:00`. Dates are
   `yyyy-MM-dd` local dates.
-- Durations in responses are whole seconds.
+- Durations in responses are whole seconds. Entries start and end on whole minutes, so their
+  durations are multiples of 60. HourLog drops the seconds of a start or an end that you send, and
+  rounds a duration to the nearest minute.
 - Validation errors return `400` with a problem detail and an `errors` map of field names to
   messages.
 - A missing item returns `404`.
