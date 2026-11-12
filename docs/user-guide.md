@@ -212,6 +212,37 @@ The **Tracker** page shows **Today's plan** when the planner is on. To turn the 
 To hide the items of **Today's plan**, click its title or the arrow next to it. The summary and
 **Open planner** stay visible. HourLog remembers your choice in this browser.
 
+## Keep a journal
+
+The **Journal** page holds one note per day about how the day went.
+
+1. Type a few lines in **Today's note**. To write about another day, pick it in the date box.
+2. Optional: under **Mood**, pick **Positive**, **Neutral**, or **Negative**. **Auto** lets the
+   analysis decide.
+3. Click **Save**, or press **Ctrl+Enter**. Saving again on the same day updates the same note.
+
+Click **Analyze** to see how the day went:
+
+- The mood and a score from -1 (very negative) to +1 (very positive).
+- The words that moved the score. A negation flips a word, so "not bad" counts as positive.
+- The work you did, such as "Finished the report" or "Am trimis oferta".
+- The work you didn't do, such as "Didn't call the client" or "N-am apucat să scriu testele".
+
+Lines that start with `[x]` or `✓` count as done. Lines that start with `[ ]` or `✗` count as not
+done. The analysis reads English and Romanian, with or without diacritics. It runs on your PC and
+sends nothing to the internet. It uses word lists, so it can be wrong. When it is, pick the mood
+yourself. Your choice shows as **(set by you)** and counts in the chart.
+
+**Mood over time** shows one bar per note for the period you pick: up for positive, down for
+negative. Above the chart you see the average mood, the days per mood, and the done and not done
+totals.
+
+**All notes** lists the notes of the period, newest first. Search ignores case and diacritics.
+Click a note to read, change, analyze, or delete it. Each save and delete shows **Undo**.
+
+To turn the journal off, go to **Settings > Modules**. Turning it off hides the page and keeps your
+notes. Notes are in the daily backups and the full export.
+
 ## Analyze your time
 
 The **Analytics** page shows where your hours went for any period, from this week to the last 12

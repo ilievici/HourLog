@@ -285,6 +285,20 @@ that the check lists.
 
 The planner API stays on when you turn the planner off in **Settings**.
 
+## Journal
+
+| Method | Path | Body | Returns |
+| --- | --- | --- | --- |
+| GET | `/journal?from&to&q` | | Notes, newest first, each with `mood`, `userMood`, `score`, `doneCount`, and `notDoneCount`. Bounds are optional. `q` ignores case and diacritics |
+| PUT | `/journal/{date}` | `{ text, mood }`. A null `mood` lets the analysis decide | The note. Creates it or updates the day's note |
+| DELETE | `/journal/{id}` | | `204`. A soft delete |
+| POST | `/journal/{id}/restore` | | The note. `400` when the day has a newer note |
+| POST | `/journal/analyze` | `{ text }` | `{ mood, score, positiveWords, negativeWords, done, notDone }`. Saves nothing |
+| GET | `/journal/summary?from&to` | | One point per note day and the totals per mood |
+
+`mood` is `Positive`, `Neutral`, or `Negative`. The analysis runs offline and is never stored, so
+better word lists update old notes too. The journal API stays on when you turn the module off.
+
 ## System, progress, backups, and full export
 
 | Method | Path | Returns |
@@ -298,8 +312,8 @@ The planner API stays on when you turn the planner off in **Settings**.
 | POST | `/import/full` | `{ counts, backupName }` |
 
 The full export has `format: "hourlog-full-export"` and `version: 2`. It holds the settings,
-custom fields, clients, projects, tasks, tags, routing rules, entries, plan items, and booked
-periods. It leaves out deleted entries and the undo history.
+custom fields, clients, projects, tasks, tags, routing rules, entries, plan items, booked
+periods, and journal notes (`dailyNotes`). It leaves out deleted entries and the undo history.
 
 Version 2 added `hourlyRate` and `currency` to each client and `hourlyRate` to each project. The
 import still reads version 1 files, where the missing fields mean no rate and `EUR`. It refuses a
