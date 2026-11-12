@@ -70,8 +70,9 @@ You can undo the change from the message that appears.
 To stop the timer, press `S` or click **Stop**. If you turned on rounding, a dialog shows the
 rounded time first. Nothing changes until you confirm.
 
-HourLog tracks hours and minutes, not seconds. The timer starts at the current minute and stops at
-the current minute, so a timer that you stop within the same minute adds no entry.
+HourLog saves hours and minutes, not seconds. The running timer shows seconds so you can see it
+count. When you stop it, the entry drops the seconds of its start and end. A timer that you stop
+within the same minute adds no entry.
 
 To restart earlier work, click **Continue** on its entry. A new timer starts with the same
 description, project, task, and tags.
