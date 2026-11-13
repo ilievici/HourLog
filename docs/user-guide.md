@@ -473,6 +473,12 @@ directly, so it works with the browser closed.
 
 The **Start** button starts a timer with no description. Add the details in the main app.
 
+To pick up earlier work, open **Continue a recent entry** under the timer when no timer runs. The
+list shows your last 8 distinct descriptions with their project, task, and tags. Select one to start
+a new timer with the same description, project, task, and tags. With the keyboard, click the widget,
+press `Tab` to reach the list, then press `Down` or `F4` to open it, the arrow keys to move, and
+`Enter` to start.
+
 The widget also adds an HourLog icon to the notification area. The icon shows reminders, and its
 menu can start or stop the timer, open HourLog, show the widget, or exit. The widget stores its
 settings in `%LocalAppData%\HourLog\widget.json`.
